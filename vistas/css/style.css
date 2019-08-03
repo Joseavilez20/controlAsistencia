@@ -1,0 +1,34 @@
+#nav-main {
+	background-color: #007bff;
+
+}
+
+#header-container.navbar.navbar-light{
+	background-color: #ff79a4;
+	color: white;
+}
+
+
+#nav-main .nav-link {
+	color: white;
+
+}
+
+
+
+.head-table{
+	background-color: #b6bfca;
+}
+
+#menulateral #nav-main .nav .nav-item a.nav-link img {
+	width: 35px;
+	height: 35px;
+}
+
+#section-content{
+	background-color: lightyellow;
+}
+
+.jumbotron .form-login{
+	width: 50%;
+}
