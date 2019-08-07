@@ -126,6 +126,42 @@ class ModeloAsistencia{
 
 	}
 
+
+	/*=================================
+	RANGO DE FECHAS
+	====================================*/
+static public function mdlRangoFechasAsistencias($tabla, $fechaInicial, $fechaFinal){
+
+	if($fechaInicial ==null){
+
+		$stmt = Conexion::conectar()->prepare("SELECT * FROM $tabla ORDER BY id ASC");
+			
+	    $stmt -> execute();
+
+		return $stmt -> fetchAll();
+
+	}else if($fechaInicial  == $fechaFinal ){
+
+		$stmt = Conexion::conectar()->prepare("SELECT * FROM $tabla WHERE fecha like '%$fechaFinal%'");
+			
+
+		$stmt -> bindParam(":fecha", $fechaFinal, PDO::PARAM_STR);
+
+		$stmt -> execute();
+
+		return $stmt -> fetchAll();
+	}else{
+		//SELECT * FROM asistencias WHERE fecha BETWEEN '2019-07-01 00:00:00' AND '2019-07-31 23.59:59'
+
+		$stmt = Conexion::conectar()->prepare("SELECT * FROM $tabla WHERE fecha BETWEEN '$fechaInicial' AND '$fechaFinal 23.59:59'");
+			
+
+		$stmt -> execute();
+
+		return $stmt -> fetchAll();
+	}
+
+}
 	
 
 

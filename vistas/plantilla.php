@@ -29,6 +29,7 @@ header("Pragma: no-cache");
     <link rel="stylesheet" type="text/css" href="vistas/css/style.css">
     <link rel="stylesheet" href="vistas/font-awesome/css/font-awesome.css">
     <link rel="stylesheet" type="text/css" href="vistas/css/jquery.dataTables.min.css">
+    <link rel="stylesheet" type="text/css" href="vistas/lib/bootstrap-daterangepicker/daterangepicker.css">
   
 
 
@@ -41,11 +42,13 @@ header("Pragma: no-cache");
     <script src="vistas/bootstrap-4.3.1-dist/js/bootstrap.min.js" ></script>
     <script src="vistas/sweetalert2/sweetalert2.all.js"></script>
     <script type="text/javascript" charset="utf8" src="vistas/js/jquery.dataTables.min.js"></script>
+    <script type="text/javascript" src="vistas/lib/bootstrap-daterangepicker/moment.min.js"></script>
+    <script type="text/javascript" src="vistas/lib/bootstrap-daterangepicker/daterangepicker.js"></script>
     
 
     <title>Control asistencia</title>
   </head>
-  <body>
+  <body class="login-page">
    
 <?php
 

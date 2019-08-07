@@ -192,6 +192,24 @@ class ControladorAsistencia{
 	}
 
 
+
+/*=================================
+	RANGO DE FECHAS
+====================================*/
+static public function ctrRangoFechasAsistencias($fechaInicial, $fechaFinal){
+
+ $tabla = "asistencias";
+
+ $respuesta = ModeloAsistencia::mdlRangoFechasAsistencias($tabla, $fechaInicial, $fechaFinal);
+
+ return $respuesta;
+
+
+
+}
+	
+
+
 }
 	
 

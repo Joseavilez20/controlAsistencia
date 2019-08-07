@@ -43,7 +43,7 @@
 		 <form method="POST">
 		  <div class="form-group">
 		  
-		    <input type="text" class="form-control" id="inputNewPassword" name="inputNewPassword" placeholder="Nueva contraseña">
+		    <input type="password" class="form-control" id="inputNewPassword" name="inputNewPassword" placeholder="Nueva contraseña">
 		   
 		  </div>
 		  <div class="form-group">

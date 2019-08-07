@@ -17,7 +17,7 @@
              ?>       
              <div class="form-group">
               <label for="exampleInputEmail1">Codigo</label>
-              <input type="text" class="form-control"  name="editarCodigo"  value="<?php echo $estudiante["codigo"]; ?>">
+              <input type="text" class="form-control"  name="editarCodigo"  value="<?php echo $estudiante["codigo"]; ?>" readonly>
               <input type="hidden" name="idEstudiante" value="<?php echo $estudiante["id"]; ?>">
              
             </div>

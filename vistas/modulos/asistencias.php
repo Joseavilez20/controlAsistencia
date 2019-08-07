@@ -6,7 +6,13 @@
               <li class="breadcrumb-item active" aria-current="page">Asistencias</li>
             </ol>
           </nav>
+ <button type="button" class="btn btn-secondary pull-right" id="daterange-btn">
+   <span> 
+    <i class="fa fa-calendar"></i> Rango de fecha
+   </span>
 
+   <i class="fa fa-caret-down"></i>
+ </button>
          <table class="table  table-bordered" id="table_id">
 
 		  <thead  class="head-table">
@@ -20,10 +26,20 @@
 		  </thead>
 		  <tbody>
 		<?php
-		  	$item = null;
-          $valor = null;
 
-        $asistencias = ControladorAsistencia::ctrMostrarAsistencias($item, $valor);
+      if(isset($_GET["fechaInicial"])){
+
+        $fechaInicial = $_GET["fechaInicial"];
+        $fechaFinal = $_GET["fechaFinal"];
+
+      }else {
+        $fechaFinal = null;
+        $fechaInicial = null;
+      }
+
+		  	
+
+        $asistencias = ControladorAsistencia::ctrRangoFechasAsistencias($fechaInicial, $fechaFinal);
         
 
        foreach ($asistencias as $key => $value){
